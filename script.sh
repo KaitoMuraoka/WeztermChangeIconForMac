@@ -1,12 +1,5 @@
 #!/bin/sh
 
-#!/bin/bash
-
-#
-# Following instructions 
-# https://gist.github.com/ansarizafar/6fa64f44aa933794c4d6638eec32b9aa
-#
-
 # Original image
 INPUT_IMAGE="terminal.png"
 
@@ -36,3 +29,15 @@ find . -type f \
 # Step 3
 echo " ==== Converting .iconset folder to icns "
 iconutil -c icns $ICONSET_FOLDER
+
+# Step 4
+# Move the terminal.icns file to /Applications/WezTerm.app/Contents/Resources/terminal.icns
+echo " ==== Moving terminal.icns to ~/WezTerm.app/Contents/Resources/terminal.icns"
+mv terminal.icns /Applications/WezTerm.app/Contents/Resources/terminal.icns
+
+# Setep 5
+# 
+echo " ==== Delete iconcache ===="
+rm /var/folders/*/*/*/com.apple.dock.iconcache
+rm -r /var/folders/*/*/*/com.apple.iconservices*
+killall Dock
