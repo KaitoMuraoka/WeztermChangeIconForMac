@@ -4,13 +4,18 @@
 > This script has only been tested in a Zsh environment.
 > If it works or does not work in bash or fish, please report it via an Issue or PR.
 
+## What is this?
+
+This is a script to change the [Wezterm](https://wezfurlong.org/wezterm/) icon.
+
+Reference: [https://github.com/wez/wezterm/discussions/2396](https://github.com/wez/wezterm/discussions/2396)
+
 ## Usage
 
 1. Clone this repository and navigate into it:
 
 ```sh
-git clone
-cd Wezterm change icon for mac
+cd WeztermChangeIconForMac
 ```
 
 2. Place the icon you want to use in the repository. The file should be named `terminal.png`.
